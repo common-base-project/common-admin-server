@@ -3,6 +3,8 @@
 - 采用SpringBoot、Shiro、MyBatis-Plus框架，开发的一套权限系统，极低门槛，拿来即用。设计之初，就非常注重安全性，为企业系统保驾护航，让一切都变得如此简单。
 - 提供了代码生成器，只需编写30%左右代码，其余的代码交给系统自动生成，可快速完成开发任务
 - 支持MySQL、达梦、Oracle、SQL Server、PostgreSQL等主流数据库
+- web-ui: https://github.com/common-base-project/common-admin-web
+- 代码生成器：https://github.com/common-base-project/common-generator
 
 
 ### 具有如下特点
@@ -31,7 +33,7 @@
 
 **项目结构**
 ```
-common-security
+common-admin
 ├─common-common     公共模块
 │ 
 ├─common-admin      管理后台
@@ -75,27 +77,24 @@ common-security
 <br>
 
 **软件需求**
-- JDK1.8
+- IDEA
+- JDK11
 - Maven3.0+
 - MySQL8.0
-- Oracle 11g+
-- SQL Server 2012+
-- PostgreSQL 9.4+
-- 达梦8
 <br>
 
 
 **本地部署**
 - 通过git下载源码
-- idea、eclipse需安装lombok插件，不然会提示找不到entity的get set方法
-- 创建数据库common_security，数据库编码为UTF-8
+- idea 需安装lombok插件，不然会提示找不到entity的get set方法
+- 创建数据库 db_admin，数据库编码为UTF-8
 - 执行db/mysql.sql文件，初始化数据
 - 修改application-dev.yml文件，更新MySQL账号和密码
 - 在common-security目录下，执行mvn clean install
-- Eclipse、IDEA运行AdminApplication.java，则可启动项目【common-admin】
-- common-admin访问路径：http://localhost:8080/common-admin
-- swagger文档路径：http://localhost:8080/common-admin/doc.html
-- 再启动前端项目，前端地址：https://gitee.com/commonio/common-ui
+- IDEA运行AdminApplication.java，则可启动项目【common-admin】
+- common-admin访问路径：http://localhost:9080/
+- swagger文档路径：http://localhost:9080/doc.html
+- 再启动前端项目，前端地址：https://github.com/common-base-project/common-admin-web
 - 账号密码：admin/admin
 <br>
 
