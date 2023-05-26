@@ -21,7 +21,6 @@
 		<module>common-dynamic-datasource</module>
         <module>common-admin</module>
         <module>common-api</module>
-<!--        <module>common-generator</module>-->
     </modules>
 
     <properties>
@@ -32,9 +31,7 @@
         <jedis.version>4.2.2</jedis.version>
         <druid.version>1.2.13</druid.version>
         <mybatisplus.version>3.5.2</mybatisplus.version>
-<!--        <sqlserver.version>4.0</sqlserver.version>-->
-<!--        <oracle.version>11.2.0.3</oracle.version>-->
-<!--        <dameng.version>8.1.2.79</dameng.version>-->
+
         <commons.lang.version>3.12.0</commons.lang.version>
         <commons.fileupload.version>1.4</commons.fileupload.version>
         <commons.io.version>2.11.0</commons.io.version>
@@ -43,10 +40,10 @@
         <joda.time.version>2.10.14</joda.time.version>
         <hutool.version>5.7.22</hutool.version>
         <gson.version>2.9.0</gson.version>
-        <jsoup.version>1.11.3</jsoup.version>
+        <jsoup.version>1.15.3</jsoup.version>
         <knife4j.version>2.0.9</knife4j.version>
         <lombok.version>1.18.24</lombok.version>
-        <docker.plugin.version>1.1.1</docker.plugin.version>
+<!--        <docker.plugin.version>1.1.1</docker.plugin.version>-->
     </properties>
 
     <dependencies>
@@ -96,6 +93,7 @@
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>${druid.version}</version>
         </dependency>
+
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
@@ -107,6 +105,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -160,7 +159,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
+<!--            <version>${lombok.version}</version>-->
         </dependency>
     </dependencies>
 

@@ -1,5 +1,3 @@
-
-
 package top.mybi.commons.dynamic.datasource.properties;
 
 /**

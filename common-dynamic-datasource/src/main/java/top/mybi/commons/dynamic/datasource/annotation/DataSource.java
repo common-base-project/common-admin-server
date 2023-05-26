@@ -1,5 +1,3 @@
-
-
 package top.mybi.commons.dynamic.datasource.annotation;
 
 import java.lang.annotation.*;

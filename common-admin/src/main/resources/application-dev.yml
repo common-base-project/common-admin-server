@@ -22,28 +22,26 @@ spring:
       stat-view-servlet:
         enabled: true
         url-pattern: /druid/*
-        #login-username: admin
-        #login-password: admin
-        #达梦数据库，需要注释掉，其他数据库可以打开
-#      filter:
-#        stat:
-#          log-slow-sql: true
-#          slow-sql-millis: 1000
-#          merge-sql: false
-#        wall:
-#          config:
-#            multi-statement-allow: true
+        login-username: admin
+        login-password: admin
+      filter:
+        stat:
+          log-slow-sql: true
+          slow-sql-millis: 1000
+          merge-sql: false
+        wall:
+          config:
+            multi-statement-allow: true
 
-##多数据源的配置，需要引用common-dynamic-datasource
-#dynamic:
-#  datasource:
-#    slave1:
-#      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-#      url: jdbc:sqlserver://123456:1433;DatabaseName=common_security
-#      username: sa
-#      password: 123456
-#    slave2:
-#      driver-class-name: org.postgresql.Driver
-#      url: jdbc:postgresql://123456:5432/common_security
-#      username: postgres
-#      password: 123456
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: mustang   # 密码（默认为空）
+    timeout: 6000ms  # 连接超时时长（毫秒）
+    jedis:
+      pool:
+        max-active: 1000  # 连接池最大连接数（使用负值表示没有限制）
+        max-wait: -1ms      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-idle: 10      # 连接池中的最大空闲连接
+        min-idle: 5       # 连接池中的最小空闲连接

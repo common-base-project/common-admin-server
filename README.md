@@ -98,13 +98,17 @@ common-admin
 - 账号密码：admin/admin
 <br>
 
-### 推送命令
+### docker 打包&推送
 ```shell
-mvn clean install org.apache.maven.plugins:maven-deploy-plugin:2.8:deploy -DskipTests
+## qcloud
+docker login ccr.ccs.tencentyun.com -u ucas -p Harbor123456
+docker buildx build --platform linux/amd64 -f Dockerfile-prod -t ccr.ccs.tencentyun.com/game-center/common-admin:staging_v0.0.1 .
+docker push ccr.ccs.tencentyun.com/game-center/common-admin:staging_v0.0.1
 
-
-## 更新所有子 module 的版本
-mvn versions:update-child-modules
+## local
+docker login 172.16.88.12:8088 -u ucas -p Harbor123456
+docker buildx build --platform linux/amd64 -f Dockerfile-prod -t 172.16.88.12:8088/common/common-admin:staging_v0.0.1 .
+docker push 172.16.88.12:8088/common/common-admin:staging_v0.0.1
 
 ```
 
