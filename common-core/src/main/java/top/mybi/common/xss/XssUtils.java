@@ -3,7 +3,7 @@
 package top.mybi.common.xss;
 
 import org.jsoup.Jsoup;
-import org.jsoup.safety.Whitelist;
+import org.jsoup.safety.Safelist;
 
 /**
  * XSS过滤工具类
@@ -11,7 +11,7 @@ import org.jsoup.safety.Whitelist;
  * @author Mustang mustang2247@gmail.com
  * @since 1.0.0
  */
-public class XssUtils extends Whitelist {
+public class XssUtils extends Safelist {
 
     /**
      * XSS过滤
@@ -23,8 +23,8 @@ public class XssUtils extends Whitelist {
     /**
      * XSS过滤白名单
      */
-    private static Whitelist xssWhitelist(){
-        return new Whitelist()
+    private static Safelist xssWhitelist(){
+        return new Safelist()
             //支持的标签
             .addTags("a", "b", "blockquote", "br", "caption", "cite", "code", "col", "colgroup", "dd", "div", "dl",
                     "dt", "em", "h1", "h2", "h3", "h4", "h5", "h6", "i", "img", "li", "ol", "p", "pre", "q", "small",
